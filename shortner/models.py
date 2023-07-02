@@ -1,6 +1,7 @@
 from django.db import models
+from mongoengine import Document, fields
 
 # Create your models here.
-class Url(models.Model):
-    link = models.CharField(max_length=10000)
-    uuid = models.CharField(max_length=10)
+class Url(Document):
+    link = fields.StringField()
+    uuid = fields.StringField()
